@@ -1,11 +1,11 @@
 output "virtual_network_id" {
-    value = azurerm_virtual_network.virtual_network.id
-    description = "The ID of the virtual network."
+  value       = azurerm_virtual_network.virtual_network.id
+  description = "The ID of the virtual network."
 }
 
 output "virtual_network_name" {
-    value = azurerm_virtual_network.virtual_network.name
-    description = "The name of the virtual network."
+  value       = azurerm_virtual_network.virtual_network.name
+  description = "The name of the virtual network."
 }
 
 /*output "virtual_network_address_space" {
@@ -14,6 +14,6 @@ output "virtual_network_name" {
 }*/
 
 output "virtual_network_location" {
-    value = azurerm_virtual_network.virtual_network.location
-    description = "The location of the virtual network."
+  value       = azurerm_virtual_network.virtual_network.location
+  description = "The location of the virtual network."
 }
