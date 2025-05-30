@@ -10,7 +10,7 @@ variable "resource_group_name" {
 
 variable "address_space" {
   description = "Adress Space of Subnet"
-  type = list()
+  type = list(string)
 }
 
 variable "location" {
