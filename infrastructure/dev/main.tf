@@ -1,17 +1,5 @@
-module "resource_group_1" {
+module "resource_group" {
   source   = "../../resources/resource_group"
-  name     = var.resource_group_name_1
-  location = local.location
-}
-
-module "resource_group_2" {
-  source   = "../../resources/resource_group"
-  name     = var.resource_group_name_2
-  location = local.location
-}
-
-module "resource_group_3" {
-  source   = "../../resources/resource_group"
-  name     = var.resource_group_name_3
+  name     = var.resource_group_name
   location = local.location
 }
