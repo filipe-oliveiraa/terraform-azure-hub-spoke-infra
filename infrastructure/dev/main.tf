@@ -56,3 +56,60 @@ module "vnet_spoke_3" {
   location            = module.resource_group.location
   resource_group_name = module.resource_group.name
 }
+
+#------------------------------------------------------
+#| Subnet
+#------------------------------------------------------
+
+module "subnet_1" {
+  source = "../../resources/subnet"
+  name = var.subnet_1_name
+  resource_group_name = module.resource_group.name
+  virtual_network_name = module.vnet_spoke_1.name
+  address_prefixes = var.subnet_1_address_prefixes
+}
+
+module "subnet_2" {
+  source = "../../resources/subnet"
+  name = var.subnet_2_name
+  resource_group_name = module.resource_group.name
+  virtual_network_name = module.vnet_spoke_1.name
+  address_prefixes = var.subnet_2_address_prefixes
+  
+}
+
+module "subnet_3" {
+  source = "../../resources/subnet"
+  name = var.subnet_3_name
+  resource_group_name = module.resource_group.name
+  virtual_network_name = module.vnet_spoke_2.name
+  address_prefixes = var.subnet_3_address_prefixes
+  
+}
+
+module "subnet_4" {
+  source = "../../resources/subnet"
+  name = var.subnet_4_name
+  resource_group_name = module.resource_group.name
+  virtual_network_name = module.vnet_spoke_2.name
+  address_prefixes = var.subnet_4_address_prefixes
+  
+}
+
+module "subnet_bastion" {
+  source = "../../resources/subnet"
+  name = var.subnet_bastion_name
+  resource_group_name = module.resource_group.name
+  virtual_network_name = module.vnet_spoke_3.name
+  address_prefixes = var.subnet_bastion_address_prefixes
+  
+}
+
+module "subnet_6" {
+  source = "../../resources/subnet"
+  name = var.subnet_6_name
+  resource_group_name = module.resource_group.name
+  virtual_network_name = module.vnet_spoke_3.name
+  address_prefixes = var.subnet_6_address_prefixes
+  
+}

@@ -63,3 +63,67 @@ variable "vnet_spoke_3_address_space" {
 #     resource_group_name = string
 #   }))
 # }
+
+#------------------------------------------------------
+#| Variables - Subnet
+#------------------------------------------------------
+
+variable "subnet_1_name" {
+  description = "Subnet_1 Name"
+  type = string
+}
+
+variable "subnet_2_name" {
+  description = "Subnet_2 Name"
+  type = string
+}
+
+variable "subnet_3_name" {
+  description = "Subnet_3 Name"
+  type = string
+}
+
+variable "subnet_4_name" {
+  description = "Subnet_4 Name"
+  type = string
+}
+
+variable "subnet_bastion_name" {
+  description = "Subnet_bastion Name"
+  type = string
+}
+
+variable "subnet_6_name" {
+  description = "Subnet_6 Name"
+  type = string
+}
+
+variable "subnet_1_address_prefixes" {
+  description = "Subnet_1 Adress Prefixes"
+  type = list(string) 
+}
+
+variable "subnet_2_address_prefixes" {
+  description = "Subnet_2 Adress Prefixes"
+  type = list(string) 
+}
+
+variable "subnet_3_address_prefixes" {
+  description = "Subnet_3 Adress Prefixes"
+  type = list(string) 
+}
+
+variable "subnet_4_address_prefixes" {
+  description = "Subnet_4 Adress Prefixes"
+  type = list(string) 
+}
+
+variable "subnet_bastion_address_prefixes" {
+  description = "Subnet_bastion Adress Prefixes"
+  type = list(string) 
+}
+
+variable "subnet_6_address_prefixes" {
+  description = "Subnet_6 Adress Prefixes"
+  type = list(string) 
+}
